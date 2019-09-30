@@ -8,10 +8,10 @@ class FinalFormtasy extends Component {
             Interactive form example for PreFare foods..
             <div className={styles.signUpA}>
             <form>
-                <p>My name is....<input className={styles.formInput} /></p>
-                <p>I wish to have food delivered for myself and <input className={styles.formInput} /> additional people.</p>
-                <p>We live in zipcode <input className={styles.formInput} /></p>
-                <p>My email address is <input className={styles.formInput} /></p>
+                <p className={styles.formOne}>My name is....<input className={styles.formInput}  /></p>
+                <p className={styles.formOne}>I wish to order for <input className={styles.formInput} onKeyDown={console.log('keydown.event')} /> people per meal.</p>
+                <p className={styles.formTwo}>We live in zipcode <input className={styles.formInput} /></p>
+                <p className={styles.formThree}>My email address is <input className={styles.formInput} /></p>
             </form>
             </div>
         </div>
