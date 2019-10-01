@@ -23,13 +23,28 @@ class App extends Component {
       number_of_servings:'',
       phone: '',
       meal_credits: '',
+      showInputFormB: false,
+      showInputFormC: false,
     }
   }
+
+  handleFormB = () => {
+    this.setState({
+        showInputFormB: true
+    })
+  }
+
+  handleFormC = () => {
+    this.setState({
+        showInputFormC: true
+    })
+  }
+
   render() {
   return (
     <div className="App">
       <TitleBar />
-      <FinalFormtasy />
+      <FinalFormtasy showInputFormB={this.state.showInputFormB} showInputFormC={this.state.showInputFormC} />
     </div>
     );
   }
