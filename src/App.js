@@ -25,18 +25,27 @@ class App extends Component {
       meal_credits: '',
       showInputFormB: false,
       showInputFormC: false,
+      showInputFormD: false,
     }
   }
 
-  handleFormB = () => {
+  handleFormB = (e) => {
+    console.log('FormB')
     this.setState({
         showInputFormB: true
     })
   }
 
   handleFormC = () => {
+    console.log('FormC')
     this.setState({
         showInputFormC: true
+    })
+  }
+  handleFormD = () => {
+    console.log('FormD')
+    this.setState({
+        showInputFormD: true
     })
   }
 
@@ -44,7 +53,7 @@ class App extends Component {
   return (
     <div className="App">
       <TitleBar />
-      <FinalFormtasy showInputFormB={this.state.showInputFormB} showInputFormC={this.state.showInputFormC} />
+      <FinalFormtasy handleFormD={this.handleFormD} handleFormC={this.handleFormC} handleFormB={this.handleFormB} showInputFormB={this.state.showInputFormB} showInputFormC={this.state.showInputFormC} showInputFormD={this.state.showInputFormD} />
     </div>
     );
   }
