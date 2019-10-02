@@ -10,12 +10,15 @@ const FinalFormtasy = (props) => {
         <div className={styles.formWrapper}>
             Interactive form example for PreFare foods..
             <div className={styles.signUpA}>
-            <form>
-                <p className={styles.formOne}>My name is....<input className={styles.formInput}  /></p>
-                <p className={styles.formOne}>I wish to order for <input className={styles.formInput} onKeyDown={props.handleFormB} /> people per meal.</p>
-                <p className={`${props.showInputFormB ? 'hidden' : 'hidden'}`}>We live in zipcode <input className={styles.formInput} onKeyDown={props.handleFormC} /></p>
-                <p className={`${props.showInputFormC ? 'hidden' : 'hidden'}`}>My email address is <input className={styles.formInput} onKeyDown={props.handleFormD} /></p>
-            </form>
+                <form>
+                    <p>My name is....<input className={styles.formInput}  /></p>
+                    <p>I wish to order for <input className={styles.formInput} onKeyDown={props.handleFormB} /> people per meal.</p>
+                    <p className={styles.formB}>We live in zipcode <input className={styles.formInput} onKeyDown={props.handleFormC} /></p>
+                    <p className={styles.formC}>My email address is <input className={styles.formInput} onKeyDown={props.handleFormD} /></p>
+                    <p className={styles.formD}>
+                         We just need a bit more information and youll be all set... 
+                         <input className={styles.formInput} onKeyDown={props.handleFormD} /></p>
+                </form>
             </div>
         </div>
     )

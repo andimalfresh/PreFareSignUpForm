@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FinalFormtasy from './components/FinalFormtasy'
 import TitleBar from './components/TitleBar'
+import ParallaxComponent from './components/ParallaxComponent'
 import './App.scss';
 
 class App extends Component {
@@ -29,7 +30,7 @@ class App extends Component {
     }
   }
 
-  handleFormB = (e) => {
+  handleFormB = () => {
     console.log('FormB')
     this.setState({
         showInputFormB: true
@@ -53,6 +54,7 @@ class App extends Component {
   return (
     <div className="App">
       <TitleBar />
+      <ParallaxComponent />
       <FinalFormtasy handleFormD={this.handleFormD} handleFormC={this.handleFormC} handleFormB={this.handleFormB} showInputFormB={this.state.showInputFormB} showInputFormC={this.state.showInputFormC} showInputFormD={this.state.showInputFormD} />
     </div>
     );
