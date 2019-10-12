@@ -54,8 +54,11 @@ class App extends Component {
   return (
     <div className="App">
       <TitleBar />
-      <ParallaxComponent />
-      <FinalFormtasy handleFormD={this.handleFormD} handleFormC={this.handleFormC} handleFormB={this.handleFormB} showInputFormB={this.state.showInputFormB} showInputFormC={this.state.showInputFormC} showInputFormD={this.state.showInputFormD} />
+        <div className='fancyPics'>
+
+          {/* <ParallaxComponent /> */}
+        </div>
+        <FinalFormtasy handleFormD={this.handleFormD} handleFormC={this.handleFormC} handleFormB={this.handleFormB} showInputFormB={this.state.showInputFormB} showInputFormC={this.state.showInputFormC} showInputFormD={this.state.showInputFormD} />
     </div>
     );
   }
