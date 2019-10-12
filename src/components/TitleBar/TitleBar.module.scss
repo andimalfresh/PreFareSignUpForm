@@ -1,3 +1,39 @@
-.titleBar {
-   color:lightblue
-}
+
+.navigationContainer {
+   height: 25%;
+   width: 100%;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   .navigationList {
+     justify-content: right;
+     ul {
+       list-style-type: none;
+       margin-inline-start: 0em;
+       margin-right: 20px;
+       li {
+         display: inline;
+         padding-left: 5px;
+         padding-right: 5px;
+         a:link {
+            color: #ff9e16;
+            text-decoration: none;
+         }
+         a:visited {
+            color: #ff9e16;
+         }
+         a:hover {
+            color: #4daa95;
+         }
+      }
+     }
+   }
+ }
+ .logoContainer  {
+   margin-left: 15px;
+   width: 25%;
+   justify-content: left;
+ }

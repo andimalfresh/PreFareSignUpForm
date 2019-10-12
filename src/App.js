@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import FinalFormtasy from './components/FinalFormtasy'
 import TitleBar from './components/TitleBar'
+import Prefooter from './components/Prefooter'
 import ParallaxComponent from './components/ParallaxComponent'
-import './App.scss';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import styles from './App.module.scss';
 
 class App extends Component {
   constructor() {
@@ -52,14 +54,17 @@ class App extends Component {
 
   render() {
   return (
-    <div className="App">
+    <Router>
+    <div className={styles.App}>
       <TitleBar />
         <div className='fancyPics'>
 
           {/* <ParallaxComponent /> */}
         </div>
         <FinalFormtasy handleFormD={this.handleFormD} handleFormC={this.handleFormC} handleFormB={this.handleFormB} showInputFormB={this.state.showInputFormB} showInputFormC={this.state.showInputFormC} showInputFormD={this.state.showInputFormD} />
+        <Prefooter />
     </div>
+    </Router>
     );
   }
 }
