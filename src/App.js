@@ -34,7 +34,7 @@ class App extends Component {
 
   formSubmission = () => {
     console.log(this.state)
-    alert.show('Thank you ' + this.state.name + ' for signing up with PreFare. We will you a comfirmation text shortly to '+ this.state.phone + '.')
+    alert('Thank you ' + this.state.name + ' for signing up with PreFare. We will you a comfirmation text shortly to '+ this.state.phone + '.')
   }
 
   getFormData = (event) => {
