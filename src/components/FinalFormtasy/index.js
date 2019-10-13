@@ -12,7 +12,7 @@ const FinalFormtasy = (props) => {
             <span className={styles.formTextGreen}>Interactive form example for PreFare foods..</span>
                 <form>
                     <p>My name is....<input className={styles.formInput} name="name" onChange={props.getFormData }  /></p>
-                    <p>I wish to order <input className={styles.formInputB} onKeyDown={props.handleFormB} name="number_of_servings"  onChange={props.getFormData } />servings per meal.</p>
+                    <p>I wish to order <input type="number" className={styles.formInputB} onKeyDown={props.handleFormB} name="number_of_servings"  onChange={props.getFormData } />servings per meal.</p>
                     <p style={props.showInputFormB ? {display: 'block'} : { display: 'none' }} className={styles.formB}>We live in zipcode <input type="number" className={styles.formInputC} onKeyDown={props.handleFormC} name="zip"  onChange={props.getFormData } /></p>
                     <p style={props.showInputFormC ? {display: 'block'} : { display: 'none' }} className={styles.formC}>My email address is <input className={styles.formInput} onKeyDown={props.handleFormD} name="email"  onChange={props.getFormData } /></p>
                     <p style={props.showInputFormD ? {display: 'block'} : { display: 'none' }} className={styles.formD}>
