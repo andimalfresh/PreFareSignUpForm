@@ -7,9 +7,9 @@ const FinalFormtasy = (props) => {
 
 
     return (
-        <div className={styles.formWrapper}>
-           <span className={styles.formTextGreen}>Interactive form example for PreFare foods..</span> 
-            <div className={styles.signUpA}>
+        <div className={styles.signUpA}> 
+            <div className={styles.formWrapper} >
+            <span className={styles.formTextGreen}>Interactive form example for PreFare foods..</span>
                 <form>
                     <p>My name is....<input className={styles.formInput}  /></p>
                     <p>I wish to order <input className={styles.formInputB} onKeyDown={props.handleFormB} />servings per meal.</p>

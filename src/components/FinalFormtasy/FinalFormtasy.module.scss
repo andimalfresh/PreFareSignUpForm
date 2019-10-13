@@ -1,83 +1,94 @@
-.formWrapper {
-    width: 80vw;
-    height: auto;
-    margin: auto;
-    background-color:ghostwhite;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:  1.75em;
-    padding: 25px;
-    .formInput {
-        -moz-appearance: none;
-        appearance: none;
-        display: inline-block;
-        margin: 0;
-        padding: 8px 8px;
-        padding-bottom: 0;
-        text-align: center;
-        letter-spacing: 1px;
-        color: #ff8d6a;
-        border: 0;
-        border-bottom: 2px dotted #b5b3b3;
-        outline: none;
-        background-color: transparent;
-        font-size: .75em;
-        font-weight: 500;
-    }
-    .formInputB {
-        -moz-appearance: none;
-        appearance: none;
-        display: inline-block;
-        margin: 0;
-        padding: 8px 8px;
-        padding-bottom: 0;
-        text-align: center;
-        letter-spacing: 1px;
-        color: #ff8d6a;
-        border: 0;
-        border-bottom: 2px dotted #b5b3b3;
-        outline: none;
-        background-color: transparent;
-        font-size: 1em;
-        font-weight: 500;
-        width: 75px;
-    }
-    .formInputC {
-        -moz-appearance: none;
-        appearance: none;
-        display: inline-block;
-        margin: 0;
-        padding: 8px 8px;
-        padding-bottom: 0;
-        text-align: center;
-        letter-spacing: 1px;
-        color: #ff8d6a;
-        border: 0;
-        border-bottom: 2px dotted #b5b3b3;
-        outline: none;
-        background-color: transparent;
-        font-size: 1em;
-        font-weight: 500;
-        width: 125px;
-    }
-    .formB {
-        display: none
-    }
-    .formC {
-        display: none
-    }
-    .formD {
-        display: none
-    }
-    .signUpButton {
-            background-color: #ff9e16;
-            color:white;
-            border-radius: 500px;
-            padding: 8px 16px;
-            font-weight: 300;
-            font-size: 14px;
-            border: 2px solid #ff9e16;
-    }
+.signUpA {
+    // background-image: url(../../img/avacadoSalmon.jpg);
+    // background-repeat: no-repeat;
+    background-color: #cff0e8;
+    padding: 50px;
+
     .formTextGreen {
         color: #4daa95;
+    }
+    .formWrapper {
+        width: 60vw;
+        height: auto;
+        margin: auto;
+        background-color:ghostwhite;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:  1.75em;
+        padding: 25px;
+        opacity: .90;
+        p {
+                padding: 20px;
+        }
+        .formInput {
+            -moz-appearance: none;
+            appearance: none;
+            display: inline-block;
+            margin: 0;
+            padding: 8px 8px;
+            padding-bottom: 0;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #ff8d6a;
+            border: 0;
+            border-bottom: 2px dotted #b5b3b3;
+            outline: none;
+            background-color: transparent;
+            font-size: .75em;
+            font-weight: 500;
+        }
+        .formInputB {
+            -moz-appearance: none;
+            appearance: none;
+            display: inline-block;
+            margin: 0;
+            padding: 8px 8px;
+            padding-bottom: 0;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #ff8d6a;
+            border: 0;
+            border-bottom: 2px dotted #b5b3b3;
+            outline: none;
+            background-color: transparent;
+            font-size: 1em;
+            font-weight: 500;
+            width: 75px;
+        }
+        .formInputC {
+            -moz-appearance: none;
+            appearance: none;
+            display: inline-block;
+            margin: 0;
+            padding: 8px 8px;
+            padding-bottom: 0;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #ff8d6a;
+            border: 0;
+            border-bottom: 2px dotted #b5b3b3;
+            outline: none;
+            background-color: transparent;
+            font-size: 1em;
+            font-weight: 500;
+            width: 125px;
+        }
+        .formB {
+            display: none
+        }
+        .formC {
+            display: none
+        }
+        .formD {
+            display: none
+        }
+        .signUpButton {
+                background-color: #ff9e16;
+                color:white;
+                border-radius: 500px;
+                padding: 8px 16px;
+                font-weight: 300;
+                font-size: 14px;
+                border: 2px solid #ff9e16;
+        }
     }
 }
