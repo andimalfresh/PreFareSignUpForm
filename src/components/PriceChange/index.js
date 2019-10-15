@@ -18,7 +18,7 @@ const PriceChange = (props) => {
                         <input placeholder={prods.retail_price} className={styles.inputField} name="retail_price" onChange={props.getPriceData}/>
                     </div>
                     <div className="col-sm">
-                        <button id={prods.id} onClick={props.getIdForUpdate}>Change Price</button>
+                        <button id={prods.id} onMouseOver={props.getIdForUpdate} onClick={props.updateMenuItem}>Change Price</button>
                     </div>
                 </div>
               )})
