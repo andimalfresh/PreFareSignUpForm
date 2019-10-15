@@ -1,0 +1,58 @@
+.priceChangeMenu {
+    display: grid;
+    justify-content: center;
+    background-color:#cff0e8;
+    flex-direction: row;
+    color: #4daa95;
+    padding: 25px;
+    height: 600px;
+    ul {
+        list-style-type:none;
+    }
+    .menuRow {
+        display:flex;
+        justify-content: space-between;
+        .priceLine {
+            color: orange;
+        }
+    }
+    .menuTitle {
+        color: orange;
+        font-size: 1.5em;
+    }
+    .message {
+        font-size: .8em;
+        color: #44ad95;
+ 
+    }
+    .inputField {
+        -moz-appearance: none;
+        appearance: none;
+        display: inline-block;
+        margin: 0;
+        padding: 8px 8px;
+        padding-bottom: 0;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #ff8d6a;
+        border: 0;
+        border-bottom: 2px dotted #b5b3b3;
+        outline: none;
+        background-color: transparent;
+        font-size: 1em;
+        font-weight: 500;
+        width: 75px;
+        }
+        button {
+        background-color: #ff9e16;
+        color:white;
+        border-radius: 500px;
+        padding: 8px 16px;
+        font-weight: 300;
+        font-size: 14px;
+        border: 2px solid #ff9e16
+        }
+    .menu {
+        height:350px;  
+    }
+}

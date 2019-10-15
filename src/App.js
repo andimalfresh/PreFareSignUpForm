@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import FinalFormtasy from './components/FinalFormtasy'
 import TitleBar from './components/TitleBar'
 import Prefooter from './components/Prefooter'
+import PriceChange from './components/PriceChange'
 // import ParallaxComponent from './components/ParallaxComponent'
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styles from './App.module.scss';
+
+const menuAPI = "https://uumbrella.herokuapp.com/products/"
 
 class App extends Component {
   constructor() {
@@ -29,7 +32,40 @@ class App extends Component {
       showInputFormB: false,
       showInputFormC: false,
       showInputFormD: false,
+      showHiddenForm: false,
+      menuItems: [],
     }
+  }
+
+  async componentDidMount() {
+    let responce = await fetch(menuAPI)
+    let json = await responce.json()
+    console.log("jsonlog", json)
+    this.setState ({
+      menuItems: json
+    })
+  }
+  changeMenuItemPrice = () => {
+    console.log('changeMenuPrice')
+  }
+
+  updateMenuItem = () => {
+    let update = {
+      retail_price: this.state.newPrice
+    }
+    fetch(`${menuAPI}${this.state.menuItemSelected}`, {
+      method: "PUT", 
+      body: JSON.stringify(update), 
+      headers: {
+        "Content-Type": "application/json", 
+      }
+    })
+  }
+
+  getIdForUpdate = (event) => {
+    this.setState({
+     idForChange : event.target.id
+    })
   }
 
   formSubmission = () => {
@@ -41,6 +77,13 @@ class App extends Component {
     const { value, name } = event.target
     this.setState({
       [name]: value
+    })
+  }
+
+  handleHiddenForm = () => {
+    console.log('Hidden Form')
+    this.setState({
+        showHiddenForm: true
     })
   }
 
@@ -67,13 +110,10 @@ class App extends Component {
   render() {
   return (
     <div className={styles.App}>
-      <TitleBar />
-        <div className='fancyPics'>
-
-          {/* <ParallaxComponent /> */}
-        </div>
+        <TitleBar />
         <FinalFormtasy formSubmission={this.formSubmission} getFormData={this.getFormData} handleFormD={this.handleFormD} handleFormC={this.handleFormC} handleFormB={this.handleFormB} showInputFormB={this.state.showInputFormB} showInputFormC={this.state.showInputFormC} showInputFormD={this.state.showInputFormD} />
         <Prefooter />
+        <PriceChange changeMenuItemPrice={this.changeMenuItemPrice} menuItems={this.state.menuItems} handleHiddenForm={this.handleHiddenForm} showHiddenForm={this.state.showHiddenForm } />
     </div>
     );
   }
