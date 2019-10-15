@@ -34,6 +34,8 @@ class App extends Component {
       showInputFormD: false,
       showHiddenForm: false,
       menuItems: [],
+      retail_price: '',
+      menuItemSelected:''
     }
   }
 
@@ -45,13 +47,16 @@ class App extends Component {
       menuItems: json
     })
   }
-  changeMenuItemPrice = () => {
-    console.log('changeMenuPrice')
+  getPriceData = (event) => {
+      const { value, name } = event.target
+      this.setState({
+        [name]: value
+      })
   }
 
   updateMenuItem = () => {
     let update = {
-      retail_price: this.state.newPrice
+      retail_price: this.state.retail_price
     }
     fetch(`${menuAPI}${this.state.menuItemSelected}`, {
       method: "PUT", 
@@ -64,7 +69,17 @@ class App extends Component {
 
   getIdForUpdate = (event) => {
     this.setState({
-     idForChange : event.target.id
+     menuItemSelected : event.target.id
+    })
+    let update = {
+      retail_price: this.state.retail_price
+    }
+    fetch(`${menuAPI}${this.state.menuItemSelected}`, {
+      method: "PUT", 
+      body: JSON.stringify(update), 
+      headers: {
+        "Content-Type": "application/json", 
+      }
     })
   }
 
@@ -113,7 +128,7 @@ class App extends Component {
         <TitleBar />
         <FinalFormtasy formSubmission={this.formSubmission} getFormData={this.getFormData} handleFormD={this.handleFormD} handleFormC={this.handleFormC} handleFormB={this.handleFormB} showInputFormB={this.state.showInputFormB} showInputFormC={this.state.showInputFormC} showInputFormD={this.state.showInputFormD} />
         <Prefooter />
-        <PriceChange changeMenuItemPrice={this.changeMenuItemPrice} menuItems={this.state.menuItems} handleHiddenForm={this.handleHiddenForm} showHiddenForm={this.state.showHiddenForm } />
+        <PriceChange retail_price={this.state.retail_price} getPriceData={this.getPriceData} getIdForUpdate={this.getIdForUpdate} menuItems={this.state.menuItems} handleHiddenForm={this.handleHiddenForm} showHiddenForm={this.state.showHiddenForm } />
     </div>
     );
   }

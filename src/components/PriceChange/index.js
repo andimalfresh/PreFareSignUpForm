@@ -15,10 +15,10 @@ const PriceChange = (props) => {
                         </div>
                     </div> 
                     <div className="col-sm">
-                        <input placeholder={prods.retail_price} className={styles.inputField} />
+                        <input placeholder={prods.retail_price} className={styles.inputField} name="retail_price" onChange={props.getPriceData}/>
                     </div>
                     <div className="col-sm">
-                        <button onClick={props.changeMenuItemPrice}>Change Price</button>
+                        <button id={prods.id} onClick={props.getIdForUpdate}>Change Price</button>
                     </div>
                 </div>
               )})
